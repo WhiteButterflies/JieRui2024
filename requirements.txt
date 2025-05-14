@@ -4,3 +4,5 @@ motmetrics
 matplotlib
 numpy<2.0
 lap
+opencv-python
+opencv-python-headless
