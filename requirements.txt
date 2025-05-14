@@ -1,0 +1,6 @@
+scikit-learn
+scikit-image
+motmetrics
+matplotlib
+numpy<2.0
+lap
