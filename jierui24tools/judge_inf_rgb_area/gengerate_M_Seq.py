@@ -296,8 +296,8 @@ def generate_matrix_Seq(RGB_IMG_DIR,IR_IMG_DIR,RGB_GT_PATH,IR_GT_PATH):
         combined = np.vstack((aligned_ir, img_rgb))
         text = f"Frame: {frame_id}, SSIM: {ssim_score:.2f}"
         cv2.putText(combined, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
-        cv2.imshow("Aligned IR vs RGB", combined)
-        cv2.waitKey(0)
+        # cv2.imshow("Aligned IR vs RGB", combined)
+        # cv2.waitKey(0)
 
         if ssim_score > best_ssim:
             best_ssim = ssim_score
