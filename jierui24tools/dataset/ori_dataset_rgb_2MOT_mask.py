@@ -1,9 +1,8 @@
 import os,shutil
 from tqdm import tqdm
-from detect_black_boxx_filter_gt import process_sequence
+from jierui24tools.dataset.utils.detect_black_boxx_filter_gt import process_sequence
 
-ori_root_list = [r'C:\Users\liuji\Downloads\jierui24_final']
-dst_root = r'C:\Users\liuji\Downloads\jierui24_final_RGB'
+
 def cpoy_seq(source_dir,target_dir):
     # 定义原始目录和目标目录
 
@@ -43,8 +42,10 @@ def transform(ori_root_list,dst_root,type=['train']):
             cpoy_seq(seq,os.path.join(dst_dir,second_last_dir))
             process_sequence(os.path.join(seq,'image'),os.path.join(seq,'gt/gt.txt'),os.path.join(dst_dir,second_last_dir,'gt/gt_mask.txt'))
 
-
-transform(ori_root_list,dst_root)
+if __name__ == '__main__':
+    ori_root_list = [r'/Users/lisushang/Downloads/jierui24_final']
+    dst_root = r'/Users/lisushang/Downloads/jierui24_final_RGB/'
+    transform(ori_root_list,dst_root)
 
 
 
