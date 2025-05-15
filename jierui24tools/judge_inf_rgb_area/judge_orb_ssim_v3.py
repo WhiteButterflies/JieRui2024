@@ -28,6 +28,12 @@ RGB_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0188/image"
 IR_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final_INF/train/0188/image"
 RGB_GT_PATH = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0188/gt/gt_mask.txt"
 IR_GT_PATH = r"/Users/lisushang/Downloads/jierui24_final_INF/train/0188/gt/gt.txt"
+
+RGB_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0061/image"
+IR_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final_INF/train/0061/image"
+RGB_GT_PATH = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0061/gt/gt_mask.txt"
+IR_GT_PATH = r"/Users/lisushang/Downloads/jierui24_final_INF/train/0061/gt/gt.txt"
+
 FRAME_START, FRAME_END = 1, 119  # 改成你的帧范围
 # ============================
 
@@ -287,13 +293,6 @@ for frame_id in range(FRAME_START, FRAME_END):
     # if M is None:
     #     continue  # 匹配失败，跳过当前帧
 
-    '''calc by box'''
-        # h_rgb, w_rgb = img_rgb.shape[:2]
-        # aligned_ir = cv2.warpAffine(img_ir, M, (w_rgb, h_rgb), borderMode=cv2.BORDER_CONSTANT, borderValue=0)
-        #
-        # ir_patch = extract_patch(aligned_ir, rgb_box)
-        # rgb_patch = extract_patch(img_rgb, rgb_box)
-    '''ended'''
     '''calc by RGB and INF overlap'''
     # Step 5: warp IR image
     h_rgb, w_rgb = img_rgb.shape[:2]

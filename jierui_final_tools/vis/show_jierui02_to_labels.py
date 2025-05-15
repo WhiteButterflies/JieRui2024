@@ -126,20 +126,20 @@ def main():
     # objs=['MOT17-09-FRCNN']
     all_targets=[]
     all_languates=[]
-    json_path = r'/home/zzb/zzb/pythonfile/mot/2024/aaai/baseline/LaMOT/annotations_v1/train/MOT17'
-    all_json_objs=os.listdir(json_path)
-    all_json_objs.sort()
+    # json_path = r'/home/zzb/zzb/pythonfile/mot/2024/aaai/baseline/LaMOT/annotations_v1/train/MOT17'
+    # all_json_objs=os.listdir(json_path)
+    # all_json_objs.sort()
     for obj in objs:
         obj_count+=1
         print('{}/{}'.format(obj_count,len(objs)))
         # obj='MOT17-05-FRCNN'
         video_path = r'/data2/zzb/data/MOT/MOT17/train/{}'.format(obj)
         video_path = r'/data1/lqh/jierui2024_train/{}/visible/'.format(obj)
-        video_path = r'/data1/lqh/jierui24_final_INF/train/{}/'.format(obj)
+        video_path = r'/Users/lisushang/Downloads/jierui24_final_INF/train/{}/'.format(obj)
         video_path_gt = r'/data2/zzb/data/MOT/MOT17/train/{}/gt/gt.txt'.format(obj)
         video_path_gt = r'/data1/lqh/jierui2024_train/{}/visible/gt/gt.txt'.format(obj)
         video_path_gt = r'/data1/lqh/jierui24_final_GT/train/{}/gt/gt_mask.txt'.format(obj)
-        video_path_gt = r'/data1/lqh/jierui24_final_INF/train/{}/gt/gt.txt'.format(obj)
+        video_path_gt = r'/Users/lisushang/Downloads/jierui24_final_INF/train/{}/gt/gt.txt'.format(obj)
         # video_path_gt = r'/data2/zzb/model/MOT/2024/aaai/LG-MOT/outputs/exp_test/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn/oracle/mot_files/{}.txt'.format(obj)
 
         # print(temp_json['language'])

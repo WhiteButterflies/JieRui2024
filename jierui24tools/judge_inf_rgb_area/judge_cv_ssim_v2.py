@@ -14,8 +14,8 @@ IR_IMG_DIR = r"C:\Users\liuji\Downloads/jierui24_final/0061/infrared/image"
 RGB_GT_PATH = r"C:\Users\liuji\Downloads/jierui24_final_RGB/train/0061/gt/gt_mask.txt"
 IR_GT_PATH = r"C:\Users\liuji\Downloads/jierui24_final_INF/train/0061/gt/gt.txt"
 
-RGB_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final/0061/visible/image"
-IR_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final/0061/infrared/image"
+RGB_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0061/image"
+IR_IMG_DIR = r"/Users/lisushang/Downloads/jierui24_final_INF/train/0061/image"
 RGB_GT_PATH = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0061/gt/gt_mask.txt"
 IR_GT_PATH = r"/Users/lisushang/Downloads/jierui24_final_INF/train/0061/gt/gt.txt"
 FRAME_START, FRAME_END = 1, 119  # 改成你的帧范围
