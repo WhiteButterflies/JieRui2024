@@ -297,6 +297,7 @@ def generate_matrix_Seq(RGB_IMG_DIR,IR_IMG_DIR,RGB_GT_PATH,IR_GT_PATH):
         text = f"Frame: {frame_id}, SSIM: {ssim_score:.2f}"
         cv2.putText(combined, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
         cv2.imshow("Aligned IR vs RGB", combined)
+        cv2.waitKey(0)
 
         if ssim_score > best_ssim:
             best_ssim = ssim_score
@@ -327,5 +328,5 @@ if __name__ == '__main__':
     # ========== CONFIG ==========
     rgb_root = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/"
     ir_root = r'/Users/lisushang/Downloads/jierui24_final_INF/train/'
-    matrix_dir = r'/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/judge_inf_rgb_area/affine_demo'
-    batch_generate_martix_all_sequences(rgb_root, ir_root,matrix_dir)
+    output_matrix_dir = r'/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/judge_inf_rgb_area/affine_demo'
+    batch_generate_martix_all_sequences(rgb_root, ir_root,output_matrix_dir)

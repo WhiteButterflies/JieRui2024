@@ -16,7 +16,6 @@ def visualize_sequence(seq_id, rgb_root):
     img_dir = os.path.join(rgb_root, seq_id, "image")
     original_gt = pd.read_csv(os.path.join(rgb_root, seq_id, "gt", "gt.txt"), header=None)
     merged_gt = pd.read_csv(os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt"), header=None)
-
     columns = ['frame', 'id', 'x', 'y', 'w', 'h', 'conf', 'class', 'vis']
     original_gt.columns = merged_gt.columns = columns
 
