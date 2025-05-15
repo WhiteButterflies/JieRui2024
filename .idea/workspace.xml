@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1353c6-2d76-4701-9428-7970abe557a1" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/affine/0061_affine_matrix.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/merge_INF2RGB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/visualize_ir_rgb_merge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/gt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/gt_mask.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/inf_000008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/judge.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/judge_cv_ssim_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/judge_cv_ssim_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/judge_cv_v1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/judge_orb_ssim_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/judge_orb_ssim_v3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/rgb_000008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui_final_tools/evaluate_data/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jierui_final_tools/evaluate_data/temp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui_final_tools/vis/show_jierui02_to_labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui_final_tools/vis/show_jierui02_to_labels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="ca1353c6-2d76-4701-9428-7970abe557a1" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +218,7 @@
       <updated>1747232906622</updated>
       <workItem from="1747232907737" duration="966000" />
       <workItem from="1747233877825" duration="135000" />
-      <workItem from="1747271831532" duration="6060000" />
+      <workItem from="1747271831532" duration="6553000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -261,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747233970260</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <option name="closed" value="true" />
+      <created>1747278383497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747278383497</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

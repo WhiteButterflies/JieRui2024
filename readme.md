@@ -9,7 +9,7 @@ jierui_final_tools:
     vis:原始数据集可视化
 
 jierui24_tools：
-        
+
     dataset：原始数据集转化为 MOT 格式
     剩下两个文件夹是我写的仿射变换，IR->RGB
     
