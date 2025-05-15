@@ -46,7 +46,7 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, id_offset=10000
 
 def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir):
     seq_list = sorted(os.listdir(rgb_root))
-    seq_list = ['0061']
+    # seq_list = ['0061']
     for seq_id in tqdm(seq_list, desc="处理所有序列"):
         try:
             merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir)

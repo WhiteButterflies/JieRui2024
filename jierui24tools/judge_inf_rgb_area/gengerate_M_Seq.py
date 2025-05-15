@@ -312,7 +312,7 @@ def generate_matrix_Seq(RGB_IMG_DIR,IR_IMG_DIR,RGB_GT_PATH,IR_GT_PATH):
 
 def batch_generate_martix_all_sequences(rgb_root, ir_root, matrix_dir):
     seq_list = sorted(os.listdir(rgb_root))
-    seq_list = ['0061']
+    # seq_list = ['0061']
     os.makedirs(matrix_dir, exist_ok=True)
     for seq_id in tqdm(seq_list, desc="处理所有序列"):
         RGB_IMG_DIR = os.path.join(rgb_root, seq_id,'image')
@@ -320,6 +320,9 @@ def batch_generate_martix_all_sequences(rgb_root, ir_root, matrix_dir):
         RGB_GT_PATH = os.path.join(rgb_root, seq_id,'gt','gt_mask.txt')
         IR_GT_PATH = os.path.join(ir_root, seq_id,'gt','gt.txt')
         # try:
+        if '.DS_Store' in RGB_IMG_DIR:
+            continue
+
         best_frame,best_m=generate_matrix_Seq(RGB_IMG_DIR,IR_IMG_DIR,RGB_GT_PATH,IR_GT_PATH)
         np.save(os.path.join(matrix_dir,seq_id+"_affine_matrix.npy"), best_m)
         # except Exception as e:
