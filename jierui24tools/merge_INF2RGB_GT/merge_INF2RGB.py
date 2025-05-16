@@ -45,8 +45,8 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, id_offset=10000
     print(f"[✓] 合并完成: {seq_id} -> {output_path}")
 
 def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir):
-    seq_list = sorted(os.listdir(rgb_root))
-    # seq_list = ['0061']
+    # seq_list = sorted(os.listdir(rgb_root))
+    seq_list = ['0061']
     for seq_id in tqdm(seq_list, desc="处理所有序列"):
         try:
             merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir)
@@ -54,5 +54,5 @@ def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir):
             print(f"[X] 序列 {seq_id} 处理失败: {e}")
 
 if __name__ == '__main__':
-    # batch_merge_all_sequences(rgb_root=r"/Users/lisushang/Downloads/jierui24_final_RGB/train/",ir_root='/Users/lisushang/Downloads/jierui24_final_INF/train/',matrix_dir='/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/merge_INF2RGB_GT/best_affine')
-    batch_merge_all_sequences(rgb_root=r"/Users/lisushang/Downloads/jierui24_final_RGB/train/",ir_root='/Users/lisushang/Downloads/jierui24_final_INF/train/',matrix_dir='/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/judge_inf_rgb_area/affine_demo')
+    batch_merge_all_sequences(rgb_root=r"/Users/lisushang/Downloads/jierui24_final_RGB/train/",ir_root='/Users/lisushang/Downloads/jierui24_final_INF/train/',matrix_dir='/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/merge_INF2RGB_GT/best_affine')
+    # batch_merge_all_sequences(rgb_root=r"/Users/lisushang/Downloads/jierui24_final_RGB/train/",ir_root='/Users/lisushang/Downloads/jierui24_final_INF/train/',matrix_dir='/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/judge_inf_rgb_area/affine_demo')
