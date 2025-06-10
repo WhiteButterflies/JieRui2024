@@ -42,6 +42,6 @@ def evaluate(data_root,save_folder):
     return {'MOTA_OVERALL':summary.mota['OVERALL']}
 if __name__ == '__main__':
     data_root =r'/Users/lisushang/Downloads/jierui2024_MOTformat_RGB/train/'
-    save_folder =r"/Users/lisushang/PycharmProjects/tracking_tools_mac/jierui_final_tools/temp/track_outputs"
+    save_folder =r"D:\JieRui2024\jierui_final_tools\temp\track_outputs"
     evaluate(data_root, save_folder)
     print(save_folder)

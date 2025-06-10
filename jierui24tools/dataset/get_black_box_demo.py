@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+import os
 
 def detect_black_boxes(img, area_thresh=500):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -13,12 +13,20 @@ def detect_black_boxes(img, area_thresh=500):
             boxes.append((x, y, w, h))
     return boxes
 
+def process_images_and_save_txt(image_dir, output_txt_path):
+    image_files = sorted([f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.png'))])
+    with open(output_txt_path, 'w') as f:
+        for frame_id, image_name in enumerate(image_files, start=1):
+            img_path = os.path.join(image_dir, image_name)
+            img = cv2.imread(img_path)
+            if img is None:
+                continue
+            boxes = detect_black_boxes(img)
+            for box_id, (x, y, w, h) in enumerate(boxes):
+                line = f"{frame_id},{box_id},{x},{y},{w},{h},1,-1,-1\n"
+                f.write(line)
 
 if __name__ == '__main__':
-
-    # 使用示例
-    image_path = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/0061/image/000031.jpg'
-    black_boxes, vis_img = detect_black_boxes(image_path, area_thresh=500, black_thresh=1)
-    cv2.imshow("Result", vis_img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    image_dir = r'D:\5-16data\jierui24_final_RGB\train\0252\image'
+    output_txt_path = r'D:\JieRui2024\datasets\mask_0252gt.txt'
+    process_images_and_save_txt(image_dir, output_txt_path)
