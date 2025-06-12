@@ -60,45 +60,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.5-29-align.executor": "Run",
-    "Python.GT_GT_maskinfer.executor": "Run",
-    "Python.align_ir2rgb.executor": "Run",
-    "Python.alin_ir2rgb.executor": "Run",
-    "Python.auto_align_ir2rgb.executor": "Run",
-    "Python.draw_gt_boxes.executor": "Run",
-    "Python.gengerate_M_Seq.executor": "Run",
-    "Python.get_black_box_demo.executor": "Run",
-    "Python.homography_calibration_gui.executor": "Run",
-    "Python.judge.executor": "Run",
-    "Python.judge_cv_ssim_v2.executor": "Run",
-    "Python.judge_cv_v1.executor": "Run",
-    "Python.judge_orb_ssim_v3.executor": "Run",
-    "Python.judge_orb_ssim_v4.executor": "Run",
-    "Python.merge_INF2RGB.executor": "Run",
-    "Python.new_align_ir2rgb.executor": "Run",
-    "Python.results_infer.executor": "Run",
-    "Python.show_jierui02_to_labels.executor": "Run",
-    "Python.show_jierui02_to_labels_RGB_ALL.executor": "Run",
-    "Python.show_jierui02_to_labels_RGB_MASK.executor": "Run",
-    "Python.test_picture.executor": "Run",
-    "Python.visualize_ir_rgb_merge.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/lisushang/Downloads/JieRui2024",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.codegpt.services.custom",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.5-29-align.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GT_GT_maskinfer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.align_ir2rgb.executor&quot;: &quot;Run&quot;,
+    &quot;Python.alin_ir2rgb.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auto_align_ir2rgb.executor&quot;: &quot;Run&quot;,
+    &quot;Python.draw_gt_boxes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gengerate_M_Seq.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_black_box_demo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homography_calibration_gui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.judge.executor&quot;: &quot;Run&quot;,
+    &quot;Python.judge_cv_ssim_v2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.judge_cv_v1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.judge_orb_ssim_v3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.judge_orb_ssim_v4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.merge_INF2RGB.executor&quot;: &quot;Run&quot;,
+    &quot;Python.new_align_ir2rgb.executor&quot;: &quot;Run&quot;,
+    &quot;Python.results_infer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.show_jierui02_to_labels.executor&quot;: &quot;Run&quot;,
+    &quot;Python.show_jierui02_to_labels_RGB_ALL.executor&quot;: &quot;Run&quot;,
+    &quot;Python.show_jierui02_to_labels_RGB_MASK.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_picture.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualize_ir_rgb_merge.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lisushang/Downloads/JieRui2024&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.codegpt.services.custom&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JieRui2024\jierui24tools\merge_INF2RGB_GT\best_affine" />
@@ -115,7 +115,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gengerate_M_Seq">
+  <component name="RunManager" selected="Python.visualize_ir_rgb_merge">
     <configuration name="5-29-align" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JieRui2024" />
       <option name="ENV_FILES" value="" />
@@ -233,9 +233,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gengerate_M_Seq" />
         <item itemvalue="Python.visualize_ir_rgb_merge" />
         <item itemvalue="Python.merge_INF2RGB" />
+        <item itemvalue="Python.gengerate_M_Seq" />
         <item itemvalue="Python.5-29-align" />
         <item itemvalue="Python.align_ir2rgb" />
       </list>
