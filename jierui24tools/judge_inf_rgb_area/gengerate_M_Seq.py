@@ -310,9 +310,75 @@ def generate_matrix_Seq(RGB_IMG_DIR,IR_IMG_DIR,RGB_GT_PATH,IR_GT_PATH):
     print("Best Affine Matrix (IR → RGB):\n", best_M)
     return best_frame, best_M
 
+
+def manual_affine_matrix(img_ir, img_rgb):
+    """
+    手动选择关键点计算红外到可见光的仿射变换矩阵
+    参数:
+        img_ir: 红外图像(numpy数组)
+        img_rgb: 可见光图像(numpy数组)
+    返回:
+        仿射变换矩阵(2x3 numpy数组)
+    """
+    # 存储选点的列表
+    points_ir = []
+    points_rgb = []
+
+    def on_mouse_ir(event, x, y, flags, param):
+        if event == cv2.EVENT_LBUTTONDOWN and len(points_ir) < 4:
+            points_ir.append((x, y))
+            cv2.circle(img_ir_disp, (x, y), 5, (0, 255, 0), -1)
+            cv2.imshow("IR Image - Select 4 Points", img_ir_disp)
+
+    def on_mouse_rgb(event, x, y, flags, param):
+        if event == cv2.EVENT_LBUTTONDOWN and len(points_rgb) < 4:
+            points_rgb.append((x, y))
+            cv2.circle(img_rgb_disp, (x, y), 5, (0, 255, 0), -1)
+            cv2.imshow("RGB Image - Select 4 Points", img_rgb_disp)
+
+    # 创建可显示的副本
+    img_ir_disp = img_ir.copy()
+    img_rgb_disp = img_rgb.copy()
+
+    # 显示图像并设置鼠标回调
+    cv2.namedWindow("IR Image - Select 4 Points")
+    cv2.setMouseCallback("IR Image - Select 4 Points", on_mouse_ir)
+    cv2.imshow("IR Image - Select 4 Points", img_ir_disp)
+
+    cv2.namedWindow("RGB Image - Select 4 Points")
+    cv2.setMouseCallback("RGB Image - Select 4 Points", on_mouse_rgb)
+    cv2.imshow("RGB Image - Select 4 Points", img_rgb_disp)
+
+    print("请在红外图像上选择4个关键点，然后在可见光图像上选择对应的4个点")
+
+    # 等待选点完成
+    while len(points_ir) < 4 or len(points_rgb) < 4:
+        key = cv2.waitKey(20)
+        if key == 27:  # ESC键退出
+            cv2.destroyAllWindows()
+            return None
+
+    cv2.destroyAllWindows()
+
+    # 转换为numpy数组
+    src_pts = np.float32(points_ir).reshape(-1, 1, 2)
+    dst_pts = np.float32(points_rgb).reshape(-1, 1, 2)
+
+    # 计算仿射变换矩阵
+    M, _ = cv2.estimateAffinePartial2D(src_pts, dst_pts)
+
+    # 显示变换结果验证
+    h, w = img_rgb.shape[:2]
+    aligned_ir = cv2.warpAffine(img_ir, M, (w, h))
+    combined = np.vstack((aligned_ir, img_rgb))
+    cv2.imshow("Alignment Result", combined)
+    cv2.waitKey(3000)
+    cv2.destroyAllWindows()
+
+    return 1,M
 def batch_generate_martix_all_sequences(rgb_root, ir_root, matrix_dir):
     seq_list = sorted(os.listdir(rgb_root))
-    # seq_list = ['0061']
+    seq_list = ['0061']
     os.makedirs(matrix_dir, exist_ok=True)
     for seq_id in tqdm(seq_list, desc="处理所有序列"):
         RGB_IMG_DIR = os.path.join(rgb_root, seq_id,'image')
@@ -327,9 +393,32 @@ def batch_generate_martix_all_sequences(rgb_root, ir_root, matrix_dir):
         np.save(os.path.join(matrix_dir,seq_id+"_affine_matrix.npy"), best_m)
         # except Exception as e:
         #     print(f"[X] 序列 {seq_id} 处理失败: {e}")
+def batch_generate_martix_all_sequences_manual(rgb_root, ir_root, matrix_dir):
+    seq_list = sorted(os.listdir(rgb_root))
+    seq_list = ['0061']
+    os.makedirs(matrix_dir, exist_ok=True)
+    for seq_id in tqdm(seq_list, desc="处理所有序列"):
+        RGB_IMG_DIR = os.path.join(rgb_root, seq_id,'image')
+        IR_IMG_DIR = os.path.join(ir_root, seq_id,'image')
+        RGB_GT_PATH = os.path.join(rgb_root, seq_id,'gt','gt_mask.txt')
+        IR_GT_PATH = os.path.join(ir_root, seq_id,'gt','gt.txt')
+        # try:
+        if '.DS_Store' in RGB_IMG_DIR:
+            continue
+        frame_id = 1
+        img_ir_path = os.path.join(IR_IMG_DIR, f"{frame_id:06d}.jpg")
+        img_rgb_path = os.path.join(RGB_IMG_DIR, f"{frame_id:06d}.jpg")
+        img_ir = cv2.imread(img_ir_path)
+        img_rgb = cv2.imread(img_rgb_path)
+
+        best_frame,best_m=manual_affine_matrix(img_ir, img_rgb)
+        np.save(os.path.join(matrix_dir,seq_id+"_affine_matrix.npy"), best_m)
+        # except Exception as e:
+        #     print(f"[X] 序列 {seq_id} 处理失败: {e}")
 if __name__ == '__main__':
     # ========== CONFIG ==========
     rgb_root = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/"
     ir_root = r'/Users/lisushang/Downloads/jierui24_final_INF/train/'
-    output_matrix_dir = r'/Users/lisushang/PycharmProjects/JieRui2024/jierui24tools/judge_inf_rgb_area/affine_demo'
-    batch_generate_martix_all_sequences(rgb_root, ir_root,output_matrix_dir)
+    output_matrix_dir = r'/Users/lisushang/Downloads/JieRui2024/jierui24tools/merge_INF2RGB_GT/best_affine'
+    # batch_generate_martix_all_sequences(rgb_root, ir_root,output_matrix_dir)
+    batch_generate_martix_all_sequences_manual(rgb_root, ir_root,output_matrix_dir)
