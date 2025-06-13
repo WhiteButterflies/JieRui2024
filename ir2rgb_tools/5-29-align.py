@@ -3,11 +3,15 @@
 import cv2
 import numpy as np
 import os
+import json
 
 # ==== 路径配置    ====
 rgb_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/rgb_0275_gt.txt'
 ir_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
 mask_flag_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
+
+mask_info_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt'
+
 save_path = '0275_affine_matrix.npy'
 
 rgb_img_template = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/{:06d}.jpg'
@@ -44,6 +48,12 @@ def load_mask_flags(mask_path):
                 frame_id = int(parts[1])
                 masked_frames.add(frame_id)
     return masked_frames
+# ==== 载入遮挡帧 ====
+def load_mask_info(mask_path,seq_id):
+    with open(mask_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    return data['mask_frameID']
 
 # ==== 加载每帧的目标框 ====
 def load_gt_dict_per_frame(filepath):
@@ -82,7 +92,8 @@ def main():
     max_frame = get_max_frame(rgb_gt_path)
     rgb_gt = load_gt_dict_per_frame(rgb_gt_path)
     ir_gt = load_gt_dict_per_frame(ir_gt_path)
-    masked_frames = load_mask_flags(mask_flag_path)
+    # masked_frames = load_mask_flags(mask_flag_path)
+    masked_frames = load_mask_info(mask_frameID_path)
 
     matched_rgb, matched_ir = [], []
     frames_checked = 0

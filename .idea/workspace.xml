@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca1353c6-2d76-4701-9428-7970abe557a1" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/gengerate_M_Seq.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/gengerate_M_Seq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/best_affine/0061_affine_matrix.npy" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/best_affine/0061_affine_matrix.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/visualize_ir_rgb_merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/visualize_ir_rgb_merge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ir2rgb_tools/5-29-align.py" beforeDir="false" afterPath="$PROJECT_DIR$/ir2rgb_tools/5-29-align.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jierui24tools/dataset/get_black_box_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/dataset/get_black_box_demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="pjj" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,45 +59,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.5-29-align.executor&quot;: &quot;Run&quot;,
-    &quot;Python.GT_GT_maskinfer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.align_ir2rgb.executor&quot;: &quot;Run&quot;,
-    &quot;Python.alin_ir2rgb.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auto_align_ir2rgb.executor&quot;: &quot;Run&quot;,
-    &quot;Python.draw_gt_boxes.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gengerate_M_Seq.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_black_box_demo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.homography_calibration_gui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.judge.executor&quot;: &quot;Run&quot;,
-    &quot;Python.judge_cv_ssim_v2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.judge_cv_v1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.judge_orb_ssim_v3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.judge_orb_ssim_v4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.merge_INF2RGB.executor&quot;: &quot;Run&quot;,
-    &quot;Python.new_align_ir2rgb.executor&quot;: &quot;Run&quot;,
-    &quot;Python.results_infer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.show_jierui02_to_labels.executor&quot;: &quot;Run&quot;,
-    &quot;Python.show_jierui02_to_labels_RGB_ALL.executor&quot;: &quot;Run&quot;,
-    &quot;Python.show_jierui02_to_labels_RGB_MASK.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_picture.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualize_ir_rgb_merge.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lisushang/Downloads/JieRui2024&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.codegpt.services.custom&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.5-29-align.executor": "Run",
+    "Python.5-29visualize_ir_rgb_merge.executor": "Debug",
+    "Python.GT_GT_maskinfer.executor": "Run",
+    "Python.align_ir2rgb.executor": "Run",
+    "Python.alin_ir2rgb.executor": "Run",
+    "Python.auto_align_ir2rgb.executor": "Run",
+    "Python.draw_gt_boxes.executor": "Run",
+    "Python.gengerate_M_Seq.executor": "Run",
+    "Python.get_black_box_demo.executor": "Run",
+    "Python.homography_calibration_gui.executor": "Run",
+    "Python.judge.executor": "Run",
+    "Python.judge_cv_ssim_v2.executor": "Run",
+    "Python.judge_cv_v1.executor": "Run",
+    "Python.judge_orb_ssim_v3.executor": "Run",
+    "Python.judge_orb_ssim_v4.executor": "Run",
+    "Python.merge_INF2RGB.executor": "Run",
+    "Python.new_align_ir2rgb.executor": "Run",
+    "Python.results_infer.executor": "Run",
+    "Python.show_jierui02_to_labels.executor": "Run",
+    "Python.show_jierui02_to_labels_RGB_ALL.executor": "Run",
+    "Python.show_jierui02_to_labels_RGB_MASK.executor": "Run",
+    "Python.test_picture.executor": "Run",
+    "Python.visualize_ir_rgb_merge.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "pjj",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/Users/lisushang/Downloads/JieRui2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.codegpt.services.custom",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JieRui2024\jierui24tools\merge_INF2RGB_GT\best_affine" />
@@ -108,14 +108,14 @@
       <recent name="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ir2rgb_tools" />
+      <recent name="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT" />
+      <recent name="$PROJECT_DIR$/pjj" />
       <recent name="D:\JieRui2024\jierui24tools\merge_INF2RGB_GT\best_affine" />
       <recent name="D:\JieRui2024" />
-      <recent name="D:\JieRui2024\datasets" />
-      <recent name="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/affine" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.visualize_ir_rgb_merge">
+  <component name="RunManager" selected="Python.get_black_box_demo">
     <configuration name="5-29-align" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JieRui2024" />
       <option name="ENV_FILES" value="" />
@@ -139,53 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="align_ir2rgb" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="JieRui2024" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ir2rgb_tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ir2rgb_tools/align_ir2rgb.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="gengerate_M_Seq" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="JieRui2024" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area/gengerate_M_Seq.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="merge_INF2RGB" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="5-29visualize_ir_rgb_merge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JieRui2024" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -199,7 +153,53 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/merge_INF2RGB.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/5-29visualize_ir_rgb_merge.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_black_box_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JieRui2024" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jierui24tools/dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jierui24tools/dataset/get_black_box_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="results_infer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JieRui2024" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jierui_final_tools/evaluate_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jierui_final_tools/evaluate_data/results_infer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.visualize_ir_rgb_merge" />
-        <item itemvalue="Python.merge_INF2RGB" />
-        <item itemvalue="Python.gengerate_M_Seq" />
+        <item itemvalue="Python.get_black_box_demo" />
+        <item itemvalue="Python.5-29visualize_ir_rgb_merge" />
         <item itemvalue="Python.5-29-align" />
-        <item itemvalue="Python.align_ir2rgb" />
+        <item itemvalue="Python.visualize_ir_rgb_merge" />
+        <item itemvalue="Python.results_infer" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +319,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747290656925</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <option name="closed" value="true" />
+      <created>1749799813812</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749799813812</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init">
+      <option name="closed" value="true" />
+      <created>1749800665881</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749800665881</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +376,21 @@
           <line>331</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ir2rgb_tools/5-29-align.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jierui24tools/dataset/get_black_box_demo.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT/5-29visualize_ir_rgb_merge.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -378,13 +409,14 @@
     <SUITE FILE_PATH="coverage/JieRui2024$show_jierui02_to_labels.coverage" NAME="show_jierui02_to_labels Coverage Results" MODIFIED="1747277007131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui_final_tools/vis" />
     <SUITE FILE_PATH="coverage/JieRui2024$alin_ir2rgb.coverage" NAME="alin_ir2rgb Coverage Results" MODIFIED="1747744811016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/JieRui2024$results_infer.coverage" NAME="results_infer Coverage Results" MODIFIED="1747277625729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui_final_tools/evaluate_data" />
-    <SUITE FILE_PATH="coverage/JieRui2024$5_29_align.coverage" NAME="5-29-align Coverage Results" MODIFIED="1749731893996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ir2rgb_tools" />
+    <SUITE FILE_PATH="coverage/JieRui2024$5_29_align.coverage" NAME="5-29-align Coverage Results" MODIFIED="1749803006717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ir2rgb_tools" />
     <SUITE FILE_PATH="coverage/JieRui2024$gengerate_M_Seq.coverage" NAME="gengerate_M_Seq Coverage Results" MODIFIED="1749734879056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area" />
     <SUITE FILE_PATH="coverage/JieRui2024$new_align_ir2rgb.coverage" NAME="new_align_ir2rgb Coverage Results" MODIFIED="1749733228686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ir2rgb_tools" />
+    <SUITE FILE_PATH="coverage/JieRui2024$5_29visualize_ir_rgb_merge.coverage" NAME="5-29visualize_ir_rgb_merge Coverage Results" MODIFIED="1749803627685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT" />
     <SUITE FILE_PATH="coverage/JieRui2024$draw_gt_boxes.coverage" NAME="draw_gt_boxes Coverage Results" MODIFIED="1747819063261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/JieRui2024$merge_INF2RGB.coverage" NAME="merge_INF2RGB Coverage Results" MODIFIED="1749733705765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui24tools/merge_INF2RGB_GT" />
     <SUITE FILE_PATH="coverage/JieRui2024$align_ir2rgb.coverage" NAME="align_ir2rgb Coverage Results" MODIFIED="1749537350461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ir2rgb_tools" />
     <SUITE FILE_PATH="coverage/JieRui2024$judge_cv_ssim_v2.coverage" NAME="judge_cv_ssim_v2 Coverage Results" MODIFIED="1747277568787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui24tools/judge_inf_rgb_area" />
-    <SUITE FILE_PATH="coverage/JieRui2024$get_black_box_demo.coverage" NAME="get_black_box_demo Coverage Results" MODIFIED="1747898300128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui24tools/dataset" />
+    <SUITE FILE_PATH="coverage/JieRui2024$get_black_box_demo.coverage" NAME="get_black_box_demo Coverage Results" MODIFIED="1749806456750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jierui24tools/dataset" />
   </component>
 </project>
