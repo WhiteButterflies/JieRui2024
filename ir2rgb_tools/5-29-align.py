@@ -5,13 +5,13 @@ import numpy as np
 import os
 
 # ==== 路径配置    ====
-rgb_gt_path = r'D:\JieRui2024\datasets\rgb_0275_gt.txt'
-ir_gt_path = r'D:\JieRui2024\datasets\inf_0275_gt.txt'
-mask_flag_path = r'D:\JieRui2024\datasets\mask_0275gt.txt'
+rgb_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/rgb_0275_gt.txt'
+ir_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
+mask_flag_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
 save_path = '0275_affine_matrix.npy'
 
-rgb_img_template = r'D:\5-16data\jierui24_final_RGB\train\0275\image\{:06d}.jpg'
-ir_img_template  = r'D:\5-16data\jierui24_final_INF\train\0275\image\{:06d}.jpg'
+rgb_img_template = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/{:06d}.jpg'
+ir_img_template  = r'/Users/lisushang/Downloads/jierui24_final_INF/train/0275/image/{:06d}.jpg'
 
 # ==== 可调参数 ====
 AREA_THRESH = 40000

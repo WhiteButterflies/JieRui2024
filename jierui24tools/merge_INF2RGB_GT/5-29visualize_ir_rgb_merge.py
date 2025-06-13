@@ -4,11 +4,13 @@ import numpy as np
 import pandas as pd
 
 # ====== 配置路径 ======
-rgb_gt_path     = r"D:\5-16data\jierui24_final_RGB\train\0061\gt\gt_mask.txt"
-ir_gt_path      = r"D:\JieRui2024\datasets\inf_0061_gt.txt"
-mask_gt_path    = r"D:\JieRui2024\datasets\mask_0061gt.txt"
-H_path          = r"D:\JieRui2024\jierui24tools\merge_INF2RGB_GT\best_affine\0061_affine_matrix.npy"
-rgb_img_dir     = r"D:\5-16data\jierui24_final_RGB\train\0061\image"
+rgb_gt_path     = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/gt/gt_mask.txt"
+ir_gt_path      = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
+mask_gt_path    = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
+H_path          = r"/Users/lisushang/Downloads/JieRui2024/ir2rgb_tools/0275_affine_matrix.npy"
+rgb_img_dir     = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/"
+
+
 
 # ====== 工具函数 ======
 def load_mot_gt_by_frame(filepath):
