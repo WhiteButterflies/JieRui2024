@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1353c6-2d76-4701-9428-7970abe557a1" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ca1353c6-2d76-4701-9428-7970abe557a1" name="Changes" comment="需要改成批量版本">
       <change beforePath="$PROJECT_DIR$/ir2rgb_tools/5-29-align.py" beforeDir="false" afterPath="$PROJECT_DIR$/ir2rgb_tools/5-29-align.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jierui24tools/dataset/get_black_box_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/jierui24tools/dataset/get_black_box_demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749800665881</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="需要改成批量版本">
+      <option name="closed" value="true" />
+      <created>1749806987642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749806987642</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +372,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="需要改成批量版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="需要改成批量版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

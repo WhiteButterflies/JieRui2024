@@ -6,16 +6,16 @@ import os
 import json
 
 # ==== 路径配置    ====
-rgb_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/rgb_0275_gt.txt'
-ir_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
-mask_flag_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
-
-mask_info_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt'
-
-save_path = '0275_affine_matrix.npy'
-
-rgb_img_template = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/{:06d}.jpg'
-ir_img_template  = r'/Users/lisushang/Downloads/jierui24_final_INF/train/0275/image/{:06d}.jpg'
+# rgb_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/rgb_0275_gt.txt'
+# ir_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
+# mask_flag_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
+#
+# mask_info_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt'
+#
+# save_path = '0275_affine_matrix.npy'
+#
+# rgb_img_template = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/{:06d}.jpg'
+# ir_img_template  = r'/Users/lisushang/Downloads/jierui24_final_INF/train/0275/image/{:06d}.jpg'
 
 # ==== 可调参数 ====
 AREA_THRESH = 40000
@@ -88,12 +88,12 @@ def find_nearest_center_obj(gt_objs, image_center):
     return best_pt
 
 # ==== 主函数 ====
-def main():
+def process_by_images(rgb_gt_path,ir_gt_path,mask_info_path,rgb_img_template,ir_img_template,save_path):
     max_frame = get_max_frame(rgb_gt_path)
     rgb_gt = load_gt_dict_per_frame(rgb_gt_path)
     ir_gt = load_gt_dict_per_frame(ir_gt_path)
     # masked_frames = load_mask_flags(mask_flag_path)
-    masked_frames = load_mask_info(mask_frameID_path)
+    masked_frames = load_mask_info(mask_info_path)
 
     matched_rgb, matched_ir = [], []
     frames_checked = 0
@@ -143,5 +143,24 @@ def main():
     else:
         print("❌ 单应性矩阵估计失败。")
 
+def process_by_seq(dataset_dir,base_dir):
+
+    rgb_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/rgb_0275_gt.txt'
+    ir_gt_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
+    mask_flag_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
+
+    mask_info_path = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt'
+
+    save_path = '0275_affine_matrix.npy'
+
+    rgb_img_template = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/{:06d}.jpg'
+    ir_img_template = r'/Users/lisushang/Downloads/jierui24_final_INF/train/0275/image/{:06d}.jpg'
+    process_by_images(rgb_gt_path,ir_gt_path,mask_info_path,rgb_img_template,ir_img_template,save_path)
+    pass
+
 if __name__ == '__main__':
-    main()
+    dataset_dir = r'/Users/lisushang/Downloads/jierui24_final_RGB/'
+    base_dir = r'/Users/lisushang/Downloads/JieRui2024/datasets/'
+    os.makedirs(base_dir,exist_ok=True)
+    process_by_seq(dataset_dir, base_dir)
+
