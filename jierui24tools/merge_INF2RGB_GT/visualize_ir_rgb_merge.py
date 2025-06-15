@@ -48,4 +48,4 @@ def visualize_sequence(seq_id, rgb_root,type='dataset'):
     cv2.destroyAllWindows()
 if __name__ == '__main__':
     # visualize_sequence(seq_id='0061', rgb_root=r'D:\5-16data\jierui24_final_RGB\train')
-    visualize_sequence(seq_id='0252', rgb_root=r'/Users/lisushang/Downloads/jierui24_final_RGB/train',type='pred')
+    visualize_sequence(seq_id='0061', rgb_root=r'/Users/lisushang/Downloads/jierui24_final_RGB/train',type='pred')
