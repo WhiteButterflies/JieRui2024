@@ -4,11 +4,12 @@ import numpy as np
 import pandas as pd
 
 # ====== 配置路径 ======
-rgb_gt_path     = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/gt/gt_mask.txt"
-ir_gt_path      = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0275_gt.txt'
-mask_gt_path    = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0275gt.txt'
-H_path          = r"/Users/lisushang/Downloads/JieRui2024/ir2rgb_tools/0275_affine_matrix.npy"
-rgb_img_dir     = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0275/image/"
+rgb_gt_path     = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0188/gt/gt_mask.txt"
+ir_gt_path      = r'/Users/lisushang/Downloads/JieRui2024/datasets/inf_0188_gt.txt'
+mask_gt_path    = r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_0188gt.txt'
+# H_path          = r"/Users/lisushang/Downloads/JieRui2024/ir2rgb_tools/0188_affine_matrix.npy"
+H_path          = r"/Users/lisushang/Downloads/JieRui2024/datasets/0188_affine_matrix.npy"
+rgb_img_dir     = r"/Users/lisushang/Downloads/jierui24_final_RGB/train/0188/image/"
 
 
 
