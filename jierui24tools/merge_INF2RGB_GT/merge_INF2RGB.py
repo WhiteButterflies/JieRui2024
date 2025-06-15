@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
+import json
 
 def transform_bbox(row, M):
     x, y, w, h = row['x'], row['y'], row['w'], row['h']
@@ -17,49 +18,78 @@ def transform_bbox(row, M):
     w_new = pts_trans[:, 0].max() - x_new
     h_new = pts_trans[:, 1].max() - y_new
     return pd.Series([x_new, y_new, w_new, h_new])
+def load_mask_info(mask_path,seq_id):
+    with open(mask_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data[str(seq_id)]
 
-def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, id_offset=10000):
+def get_first_masked_area(mask_path, seq_id):
+    data = load_mask_info(mask_path, seq_id)
+    for frame_id in sorted(data, key=lambda x: int(x)):
+        info = data[frame_id]
+        if info['masked']:
+            return info['masked_area']
+    return None  # 如果没有 masked==True 的帧
+
+def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, id_offset=10000):
     rgb_gt_path = os.path.join(rgb_root, seq_id, "gt", "gt_mask.txt")
     ir_gt_path = os.path.join(ir_root, seq_id, "gt", "gt.txt")
     matrix_path = os.path.join(matrix_dir, f"{seq_id}_affine_matrix.npy")
     output_path = os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt")
 
     # 检查文件是否存在
-    if not os.path.exists(rgb_gt_path):
-        print(f"[!] 跳过 {seq_id}：缺少 RGB GT 文件: {rgb_gt_path}")
-        return
-    if not os.path.exists(ir_gt_path):
-        print(f"[!] 跳过 {seq_id}：缺少 IR GT 文件: {ir_gt_path}")
-        return
-    if not os.path.exists(matrix_path):
-        print(f"[!] 跳过 {seq_id}：缺少仿射矩阵: {matrix_path}")
+    if not all(os.path.exists(p) for p in [rgb_gt_path, ir_gt_path, matrix_path, mask_info]):
+        missing = [p for p in [rgb_gt_path, ir_gt_path, matrix_path, mask_info] if not os.path.exists(p)]
+        print(f"[!] 跳过 {seq_id}：缺少文件: {', '.join(missing)}")
         return
 
     # 加载数据
     columns = ['frame', 'id', 'x', 'y', 'w', 'h', 'conf', 'class', 'vis']
     df_rgb = pd.read_csv(rgb_gt_path, header=None, names=columns)
     df_ir = pd.read_csv(ir_gt_path, header=None, names=columns)
-    M = np.load(matrix_path)
+    H = np.load(matrix_path)
 
-    # 避免 ID 冲突
-    df_ir['id'] += id_offset
 
-    # 仿射变换
-    df_ir[['x', 'y', 'w', 'h']] = df_ir.apply(lambda row: transform_bbox(row, M), axis=1)
+    # 变换IR框并过滤
+    transformed_ir = []
+    for _, row in df_ir.iterrows():
+        frame = row['frame']
+        masks = get_first_masked_area(mask_info,seq_id)
+        if not masks:
+            continue
 
-    # 合并并保存
-    df_merged = pd.concat([df_rgb, df_ir], ignore_index=True).sort_values(by=['frame', 'id'])
+        # 使用单应性变换中心点
+        cx, cy = row['x'] + row['w']/2, row['y'] + row['h']
+        pt = np.array([cx, cy, 1.0]).reshape(3,1)
+        dst = H @ pt
+        dst /= dst[2]
+        nx, ny = dst[0,0] - row['w']/2, dst[1,0] - row['h']
+
+        # 检查是否在mask区域内
+        if any((nx + row['w'] > mx and nx < mx + mw and
+                ny + row['h'] > my and ny < my + mh)
+               for mx, my, mw, mh in masks):
+            transformed_ir.append([
+                frame,
+                row['id'] + id_offset,
+                nx, ny, row['w'], row['h'],
+                row['conf'], row['class'], row['vis']
+            ])
+
+    # 创建DataFrame并合并
+    df_ir_trans = pd.DataFrame(transformed_ir, columns=columns)
+    df_merged = pd.concat([df_rgb, df_ir_trans], ignore_index=True).sort_values(by=['frame', 'id'])
     df_merged.to_csv(output_path, header=False, index=False)
-    print(f"[✓] 合并完成: {seq_id} -> {output_path}")
+    print(f"[✓] 合并完成: {seq_id} -> {output_path} (保留 {len(df_ir_trans)}/{len(df_ir)} IR检测)")
 
-def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir):
+def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir,mask_info):
     seq_list = sorted([
         s for s in os.listdir(rgb_root)
         if os.path.isdir(os.path.join(rgb_root, s)) and not s.startswith(".")
     ])
     for seq_id in tqdm(seq_list, desc="处理所有序列"):
         try:
-            merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir)
+            merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir,mask_info)
         except Exception as e:
             print(f"[X] 序列 {seq_id} 处理失败: {e}")
 
@@ -72,5 +102,6 @@ if __name__ == '__main__':
     batch_merge_all_sequences(
         rgb_root=r"/Users/lisushang/Downloads/jierui24_final_RGB/train/",
         ir_root=r"/Users/lisushang/Downloads/jierui24_final_INF/train/",
-        matrix_dir=r"/Users/lisushang/Downloads/JieRui2024/jierui24tools/merge_INF2RGB_GT/best_affine"
+        matrix_dir=r"/Users/lisushang/Downloads/JieRui2024/datasets",
+        mask_info=r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt'
     )
