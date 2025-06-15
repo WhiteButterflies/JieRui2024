@@ -31,12 +31,16 @@ def get_first_masked_area(mask_path, seq_id):
             return info['masked_area']
     return None  # 如果没有 masked==True 的帧
 
-def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, id_offset=10000):
+def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info,type='dataset',id_offset=10000):
     rgb_gt_path = os.path.join(rgb_root, seq_id, "gt", "gt_mask.txt")
     ir_gt_path = os.path.join(ir_root, seq_id, "gt", "gt.txt")
     matrix_path = os.path.join(matrix_dir, f"{seq_id}_affine_matrix.npy")
-    output_path = os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt")
-
+    if type =='dataset':
+        output_path = os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt")
+    else:
+        result_dir = os.path.join(matrix_dir,"results")
+        os.makedirs(result_dir,exist_ok=True)
+        output_path = os.path.join(result_dir,"{}.txt".format(seq_id))
     # 检查文件是否存在
     if not all(os.path.exists(p) for p in [rgb_gt_path, ir_gt_path, matrix_path, mask_info]):
         missing = [p for p in [rgb_gt_path, ir_gt_path, matrix_path, mask_info] if not os.path.exists(p)]
@@ -82,14 +86,14 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, id_o
     df_merged.to_csv(output_path, header=False, index=False)
     print(f"[✓] 合并完成: {seq_id} -> {output_path} (保留 {len(df_ir_trans)}/{len(df_ir)} IR检测)")
 
-def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir,mask_info):
+def batch_merge_all_sequences(rgb_root, ir_root, matrix_dir,mask_info,type='dataset'):
     seq_list = sorted([
         s for s in os.listdir(rgb_root)
         if os.path.isdir(os.path.join(rgb_root, s)) and not s.startswith(".")
     ])
     for seq_id in tqdm(seq_list, desc="处理所有序列"):
         try:
-            merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir,mask_info)
+            merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir,mask_info,type)
         except Exception as e:
             print(f"[X] 序列 {seq_id} 处理失败: {e}")
 
@@ -103,5 +107,7 @@ if __name__ == '__main__':
         rgb_root=r"/Users/lisushang/Downloads/jierui24_final_RGB/train/",
         ir_root=r"/Users/lisushang/Downloads/jierui24_final_INF/train/",
         matrix_dir=r"/Users/lisushang/Downloads/JieRui2024/datasets",
-        mask_info=r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt'
+        mask_info=r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt',
+        # type='dataset'
+        type='pred'
     )
