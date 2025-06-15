@@ -2,6 +2,7 @@ import os
 import cv2
 import numpy as np
 import pandas as pd
+# from Cython.Includes.cpython.time import result
 from tqdm import tqdm
 import json
 
@@ -32,8 +33,14 @@ def get_first_masked_area(mask_path, seq_id):
     return None  # 如果没有 masked==True 的帧
 
 def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info,type='dataset',id_offset=10000):
-    rgb_gt_path = os.path.join(rgb_root, seq_id, "gt", "gt_mask.txt")
-    ir_gt_path = os.path.join(ir_root, seq_id, "gt", "gt.txt")
+    if type =='dataset':
+        rgb_gt_path = os.path.join(rgb_root, seq_id, "gt", "gt_mask.txt")
+        ir_gt_path = os.path.join(ir_root, seq_id, "gt", "gt.txt")
+    else:
+        result_rgb_dir = r'/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_RGB/'
+        result_inf_dir = r'/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_INF/'
+        rgb_gt_path = os.path.join(result_rgb_dir,"{}.txt".format(seq_id))
+        ir_gt_path = os.path.join(result_inf_dir,"{}.txt".format(seq_id))
     matrix_path = os.path.join(matrix_dir, f"{seq_id}_affine_matrix.npy")
     if type =='dataset':
         output_path = os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt")

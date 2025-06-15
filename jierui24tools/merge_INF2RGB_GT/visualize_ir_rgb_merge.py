@@ -12,10 +12,17 @@ def draw_boxes(img, boxes, color, label_prefix=""):
             cv2.putText(img, f"{label_prefix}{int(row['id'])}", (x, y-5),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 1)
 
-def visualize_sequence(seq_id, rgb_root):
+def visualize_sequence(seq_id, rgb_root,type='dataset'):
     img_dir = os.path.join(rgb_root, seq_id, "image")
-    original_gt = pd.read_csv(os.path.join(rgb_root, seq_id, "gt", "gt.txt"), header=None)
-    merged_gt = pd.read_csv(os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt"), header=None)
+
+    if type =='dataset':
+        original_gt = pd.read_csv(os.path.join(rgb_root, seq_id, "gt", "gt.txt"), header=None)
+        merged_gt = pd.read_csv(os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt"), header=None)
+    else:
+        results_rgb_dir = r'/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_RGB'
+        original_gt = pd.read_csv(os.path.join(results_rgb_dir,"{}.txt").format(seq_id), header=None)
+        results_merge_dir = r'/Users/lisushang/Downloads/JieRui2024/datasets/results'
+        merged_gt = pd.read_csv(os.path.join(results_merge_dir,"{}.txt").format(seq_id), header=None)
     columns = ['frame', 'id', 'x', 'y', 'w', 'h', 'conf', 'class', 'vis']
     original_gt.columns = merged_gt.columns = columns
 
@@ -41,4 +48,4 @@ def visualize_sequence(seq_id, rgb_root):
     cv2.destroyAllWindows()
 if __name__ == '__main__':
     # visualize_sequence(seq_id='0061', rgb_root=r'D:\5-16data\jierui24_final_RGB\train')
-    visualize_sequence(seq_id='0061', rgb_root=r'/Users/lisushang/Downloads/jierui24_final_RGB/train')
+    visualize_sequence(seq_id='0061', rgb_root=r'/Users/lisushang/Downloads/jierui24_final_RGB/train',type='pred')
