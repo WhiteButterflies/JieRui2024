@@ -41,9 +41,9 @@ def evaluate(data_root,save_folder):
     summary = eval_mota(data_root, save_folder)
     return {'MOTA_OVERALL':summary.mota['OVERALL']}
 if __name__ == '__main__':
-    # data_root =r'/Users/lisushang/Downloads/jierui24_final_RGB/train'
-    # save_folder =r"/Users/lisushang/Downloads/jierui24_final_RGB/train"
-    data_root =r'D:/5-16data/jierui24_final_RGB/train'
-    save_folder =r"D:/5-16data/jierui24_final_RGB/train"
+    data_root =r'/Users/lisushang/Downloads/jierui24_final_RGB/train'
+    save_folder =r"/Users/lisushang/Downloads/jierui24_final_RGB/train"
+    # data_root =r'D:/5-16data/jierui24_final_RGB/train'
+    # save_folder =r"D:/5-16data/jierui24_final_RGB/train"
     evaluate(data_root, save_folder)
     print(save_folder)

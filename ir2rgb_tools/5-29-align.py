@@ -150,13 +150,17 @@ def process_by_images(rgb_gt_path,ir_gt_path,mask_info_path,rgb_img_template,ir_
     else:
         print("❌ 单应性矩阵估计失败。")
 
-def process_by_seq(dataset_dir,base_dir):
+def process_by_seq(dataset_dir,base_dir,type='dataset'):
     seq_list = os.listdir(os.path.join(dataset_dir, 'train'))
     for seq_id in tqdm(seq_list):
         if seq_id == '.DS_Store':
             continue
-        rgb_gt_path = r'{}/rgb_{}_gt.txt'.format(base_dir,seq_id)
-        ir_gt_path = r'{}/inf_{}_gt.txt'.format(base_dir,seq_id)
+        if type=='dataset':
+            rgb_gt_path = r'{}/rgb_{}_gt.txt'.format(base_dir,seq_id)
+            ir_gt_path = r'{}/inf_{}_gt.txt'.format(base_dir,seq_id)
+        else:
+            rgb_gt_path = r'{}/{}.txt'.format('/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_RGB', seq_id)
+            ir_gt_path = r'{}/{}.txt'.format('/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_INF', seq_id)
         mask_info_path = r'{}/mask_info.txt'.format(base_dir)
         save_path = r'{}/{}_affine_matrix.npy'.format(base_dir,seq_id)
 
@@ -169,5 +173,5 @@ if __name__ == '__main__':
     dataset_dir = r'/Users/lisushang/Downloads/jierui24_final_RGB/'
     base_dir = r'/Users/lisushang/Downloads/JieRui2024/datasets/'
     os.makedirs(base_dir,exist_ok=True)
-    process_by_seq(dataset_dir, base_dir)
+    process_by_seq(dataset_dir, base_dir,type='pred')
 

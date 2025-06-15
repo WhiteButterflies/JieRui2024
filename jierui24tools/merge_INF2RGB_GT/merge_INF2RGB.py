@@ -81,7 +81,7 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info,type=
                 ny + row['h'] > my and ny < my + mh)
                for mx, my, mw, mh in masks):
             transformed_ir.append([
-                frame,
+                int(frame),
                 row['id'] + id_offset,
                 nx, ny, row['w'], row['h'],
                 row['conf'], row['class'], row['vis']

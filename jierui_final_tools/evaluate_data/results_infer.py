@@ -18,7 +18,9 @@ def eval_mota(data_root, txt_path):
     # seqs = sorted([s for s in os.listdir(data_root) if s.endswith('SDP')])
     # seqs = sorted([s for s in os.listdir(data_root) if s.endswith('DPM')])
     # seqs = sorted([s for s in os.listdir(data_root)])
+    seqs = [s for s in seqs if '.DS_Store' !=s]
     for seq in seqs:
+
         video_out_path = os.path.join(txt_path, seq + '.txt')
         evaluator = Evaluator(data_root, seq, 'mot')
         accs.append(evaluator.eval_file(video_out_path))
@@ -41,7 +43,8 @@ def evaluate(data_root,save_folder):
     summary = eval_mota(data_root, save_folder)
     return {'MOTA_OVERALL':summary.mota['OVERALL']}
 if __name__ == '__main__':
-    data_root =r'/Users/lisushang/Downloads/jierui2024_MOTformat_RGB/train/'
-    save_folder =r"D:\JieRui2024\jierui_final_tools\temp\track_outputs"
+    data_root =r'/Users/lisushang/Downloads/jierui24_final_RGB/train/'
+    save_folder =r"/Users/lisushang/Downloads/JieRui2024/datasets/results"
+    # save_folder =r"/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_RGB"
     evaluate(data_root, save_folder)
     print(save_folder)
