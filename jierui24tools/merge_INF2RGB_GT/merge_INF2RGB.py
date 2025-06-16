@@ -46,6 +46,10 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
 
     if type == 'dataset':
         output_path = os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt")
+
+        # result_dir = os.path.join(matrix_dir, "results")
+        # os.makedirs(result_dir, exist_ok=True)
+        # output_path = os.path.join(result_dir, "{}.txt".format(seq_id))
     else:
         result_dir = os.path.join(matrix_dir, "results")
         os.makedirs(result_dir, exist_ok=True)
@@ -59,8 +63,19 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
 
     # 加载数据
     columns = ['frame', 'id', 'x', 'y', 'w', 'h', 'conf', 'class', 'vis']
-    df_rgb = pd.read_csv(rgb_gt_path, header=None, names=columns)
-    df_ir = pd.read_csv(ir_gt_path, header=None, names=columns)
+    dtype_mapping = {
+        'frame': 'int32',
+        'id': 'int32',
+        'x': 'float32',
+        'y': 'float32',
+        'w': 'float32',
+        'h': 'float32',
+        'conf': 'float32',
+        'class': 'int32',
+        'vis': 'float32'
+    }
+    df_rgb = pd.read_csv(rgb_gt_path, header=None, names=columns, dtype=dtype_mapping)
+    df_ir = pd.read_csv(ir_gt_path, header=None, names=columns, dtype=dtype_mapping)
     H = np.load(matrix_path)
 
     # 加载所有mask信息
@@ -75,7 +90,7 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
     for frame in all_frames:
         # 获取当前帧的mask区域
         frame_mask = seq_mask_data.get(str(frame), {}).get('masked_area', [])
-        if frame_mask is not None:
+        if frame_mask is not  None:
 
             # 当前帧的RGB检测
             rgb_frame = df_rgb[df_rgb['frame'] == frame]
@@ -98,7 +113,7 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
                         ny + row['h'] > my and ny < my + mh)
                        for mx, my, mw, mh in frame_mask):
                     transformed_ir.append({
-                        'frame': int(frame),
+                        'frame': frame,
                         'id': row['id'] + id_offset,
                         'x': nx,
                         'y': ny,
