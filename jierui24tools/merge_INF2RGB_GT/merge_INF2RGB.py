@@ -72,7 +72,7 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
         'h': 'float32',
         'conf': 'float32',
         'class': 'int32',
-        'vis': 'float32'
+        'vis': 'int32'
     }
     df_rgb = pd.read_csv(rgb_gt_path, header=None, names=columns, dtype=dtype_mapping)
     df_ir = pd.read_csv(ir_gt_path, header=None, names=columns, dtype=dtype_mapping)
