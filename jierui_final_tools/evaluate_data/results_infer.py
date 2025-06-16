@@ -20,7 +20,6 @@ def eval_mota(data_root, txt_path):
     # seqs = sorted([s for s in os.listdir(data_root)])
     seqs = [s for s in seqs if '.DS_Store' !=s]
     for seq in seqs:
-
         video_out_path = os.path.join(txt_path, seq + '.txt')
         evaluator = Evaluator(data_root, seq, 'mot')
         accs.append(evaluator.eval_file(video_out_path))

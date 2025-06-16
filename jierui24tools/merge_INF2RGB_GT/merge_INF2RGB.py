@@ -35,6 +35,7 @@ def get_first_masked_area(mask_path, seq_id):
 def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type='dataset', id_offset=10000):
     if type == 'dataset':
         rgb_gt_path = os.path.join(rgb_root, seq_id, "gt", "gt_mask.txt")
+        # rgb_gt_path = os.path.join(rgb_root, seq_id, "gt", "gt.txt")
         ir_gt_path = os.path.join(ir_root, seq_id, "gt", "gt.txt")
     else:
         result_rgb_dir = r'/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_RGB/'
@@ -46,7 +47,6 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
 
     if type == 'dataset':
         output_path = os.path.join(rgb_root, seq_id, "gt", "IR_RGB.txt")
-
         # result_dir = os.path.join(matrix_dir, "results")
         # os.makedirs(result_dir, exist_ok=True)
         # output_path = os.path.join(result_dir, "{}.txt".format(seq_id))
@@ -91,6 +91,7 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
         # 获取当前帧的mask区域
         frame_mask = seq_mask_data.get(str(frame), {}).get('masked_area', [])
         if frame_mask is not  None:
+        # if False:
 
             # 当前帧的RGB检测
             rgb_frame = df_rgb[df_rgb['frame'] == frame]
@@ -114,14 +115,14 @@ def merge_ir_rgb_sequence(seq_id, rgb_root, ir_root, matrix_dir, mask_info, type
                        for mx, my, mw, mh in frame_mask):
                     transformed_ir.append({
                         'frame': frame,
-                        'id': row['id'] + id_offset,
+                        'id': int(row['id'] + id_offset),
                         'x': nx,
                         'y': ny,
                         'w': row['w'],
                         'h': row['h'],
                         'conf': row['conf'],
-                        'class': row['class'],
-                        'vis': row['vis']
+                        'class': int(row['class']),
+                        'vis': int(row['vis'])
                     })
 
             # 合并当前帧的结果
