@@ -80,6 +80,20 @@ def load_gt_dict_per_frame(filepath):
     return gt_per_frame
 
 # ==== 找到离图像中心最近的小目标 ====
+# def find_nearest_center_obj(gt_objs, image_center):
+#     min_dist = float('inf')
+#     best_pt = None
+#     for (x, y, w, h) in gt_objs.values():
+#         if w * h > AREA_THRESH:
+#             continue
+#         cx = x + w / 2
+#         cy = y + h
+#         dist = np.hypot(cx - image_center[0], cy - image_center[1])
+#         if dist < min_dist:
+#             min_dist = dist
+#             best_pt = (cx, cy)
+#     return best_pt
+
 def find_nearest_center_obj(gt_objs, image_center):
     min_dist = float('inf')
     best_pt = None
@@ -87,12 +101,13 @@ def find_nearest_center_obj(gt_objs, image_center):
         if w * h > AREA_THRESH:
             continue
         cx = x + w / 2
-        cy = y + h
+        cy = y + h/2
         dist = np.hypot(cx - image_center[0], cy - image_center[1])
         if dist < min_dist:
             min_dist = dist
-            best_pt = (cx, cy)
+            best_pt = (x, cy)
     return best_pt
+
 
 # ==== 主函数 ====
 def process_by_images(rgb_gt_path,ir_gt_path,mask_info_path,rgb_img_template,ir_img_template,save_path,seq_id=None):
@@ -156,8 +171,8 @@ def process_by_seq(dataset_dir,base_dir,type='dataset'):
         if seq_id == '.DS_Store':
             continue
         if type=='dataset':
-            rgb_gt_path = r'{}/rgb_{}_gt.txt'.format(base_dir,seq_id)
-            ir_gt_path = r'{}/inf_{}_gt.txt'.format(base_dir,seq_id)
+            rgb_gt_path = r'/Users/lisushang/Downloads/jierui24_final_RGB/train/{}/gt/gt_mask.txt'.format(seq_id)
+            ir_gt_path = r'/Users/lisushang/Downloads/jierui24_final_INF/train/{}/gt/gt.txt'.format(seq_id)
         else:
             rgb_gt_path = r'{}/{}.txt'.format('/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_RGB', seq_id)
             ir_gt_path = r'{}/{}.txt'.format('/Users/lisushang/Downloads/JieRui2024/jierui_results/juesai/track_outputs_INF', seq_id)
@@ -173,5 +188,5 @@ if __name__ == '__main__':
     dataset_dir = r'/Users/lisushang/Downloads/jierui24_final_RGB/'
     base_dir = r'/Users/lisushang/Downloads/JieRui2024/datasets/'
     os.makedirs(base_dir,exist_ok=True)
-    process_by_seq(dataset_dir, base_dir,type='pred')
+    process_by_seq(dataset_dir, base_dir,type='dataset')
 
