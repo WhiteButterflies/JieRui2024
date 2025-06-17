@@ -100,12 +100,12 @@ def find_nearest_center_obj(gt_objs, image_center):
     for (x, y, w, h) in gt_objs.values():
         if w * h > AREA_THRESH:
             continue
-        cx = x + w / 2
+        cx = x + w/2
         cy = y + h/2
         dist = np.hypot(cx - image_center[0], cy - image_center[1])
         if dist < min_dist:
             min_dist = dist
-            best_pt = (x, cy)
+            best_pt = (cx, cy)
     return best_pt
 
 
@@ -188,5 +188,5 @@ if __name__ == '__main__':
     dataset_dir = r'/Users/lisushang/Downloads/jierui24_final_RGB/'
     base_dir = r'/Users/lisushang/Downloads/JieRui2024/datasets/'
     os.makedirs(base_dir,exist_ok=True)
-    process_by_seq(dataset_dir, base_dir,type='dataset')
+    process_by_seq(dataset_dir, base_dir,type='pred')
 

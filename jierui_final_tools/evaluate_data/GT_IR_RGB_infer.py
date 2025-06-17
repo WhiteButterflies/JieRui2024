@@ -18,6 +18,7 @@ def eval_mota(data_root, gt_root):
     # seqs = sorted([s for s in os.listdir(data_root) if s.endswith('SDP')])
     # seqs = sorted([s for s in os.listdir(data_root) if s.endswith('DPM')])
     # seqs = sorted([s for s in os.listdir(data_root)])
+    seqs = [s for s in seqs if '.DS_Store' !=s]
     for seq in seqs:
         video_out_path = os.path.join(gt_root, seq,'gt','IR_RGB.txt')
         evaluator = Evaluator(data_root, seq, 'mot')

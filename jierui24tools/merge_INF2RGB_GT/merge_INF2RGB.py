@@ -163,6 +163,6 @@ if __name__ == '__main__':
         ir_root=r"/Users/lisushang/Downloads/jierui24_final_INF/train/",
         matrix_dir=r"/Users/lisushang/Downloads/JieRui2024/datasets",
         mask_info=r'/Users/lisushang/Downloads/JieRui2024/datasets/mask_info.txt',
-        type='dataset'
-        # type='pred'
+        # type='dataset'
+        type='pred'
     )
