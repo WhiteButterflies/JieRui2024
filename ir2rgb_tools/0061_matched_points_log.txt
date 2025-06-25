@@ -1,0 +1,987 @@
+Matched Points Log
+====================
+Matched Point P1:
+  Frame: 1
+  RGB: id=3, (x=915.91, y=516.60)
+  IR : id=8, (x=887.11, y=579.33)
+
+Matched Point P2:
+  Frame: 2
+  RGB: id=3, (x=910.33, y=513.82)
+  IR : id=8, (x=878.84, y=570.49)
+
+Matched Point P3:
+  Frame: 8
+  RGB: id=8, (x=955.06, y=484.57)
+  IR : id=8, (x=856.63, y=525.76)
+
+Matched Point P4:
+  Frame: 9
+  RGB: id=3, (x=900.76, y=484.42)
+  IR : id=8, (x=867.19, y=514.59)
+
+Matched Point P5:
+  Frame: 10
+  RGB: id=3, (x=908.71, y=480.34)
+  IR : id=8, (x=882.85, y=511.39)
+
+Matched Point P6:
+  Frame: 11
+  RGB: id=3, (x=911.71, y=491.50)
+  IR : id=8, (x=887.79, y=525.45)
+
+Matched Point P7:
+  Frame: 12
+  RGB: id=3, (x=910.63, y=499.01)
+  IR : id=8, (x=886.70, y=541.40)
+
+Matched Point P8:
+  Frame: 13
+  RGB: id=3, (x=910.63, y=502.01)
+  IR : id=8, (x=886.70, y=550.37)
+
+Matched Point P9:
+  Frame: 19
+  RGB: id=8, (x=944.32, y=508.04)
+  IR : id=8, (x=831.70, y=573.81)
+
+Matched Point P10:
+  Frame: 21
+  RGB: id=8, (x=935.09, y=501.50)
+  IR : id=8, (x=803.23, y=552.37)
+
+Matched Point P11:
+  Frame: 25
+  RGB: id=8, (x=870.05, y=500.37)
+  IR : id=5, (x=892.12, y=555.95)
+
+Matched Point P12:
+  Frame: 26
+  RGB: id=8, (x=853.79, y=499.35)
+  IR : id=5, (x=852.33, y=562.22)
+
+Matched Point P13:
+  Frame: 29
+  RGB: id=5, (x=921.78, y=494.70)
+  IR : id=6, (x=890.55, y=552.23)
+
+Matched Point P14:
+  Frame: 32
+  RGB: id=5, (x=913.34, y=492.03)
+  IR : id=6, (x=878.94, y=547.89)
+
+Matched Point P15:
+  Frame: 35
+  RGB: id=8, (x=853.49, y=489.58)
+  IR : id=5, (x=872.03, y=547.14)
+
+Matched Point P16:
+  Frame: 39
+  RGB: id=8, (x=890.55, y=506.85)
+  IR : id=5, (x=948.24, y=574.32)
+
+Matched Point P17:
+  Frame: 40
+  RGB: id=8, (x=895.93, y=506.85)
+  IR : id=8, (x=756.64, y=569.24)
+
+Matched Point P18:
+  Frame: 46
+  RGB: id=8, (x=917.19, y=511.88)
+  IR : id=8, (x=790.40, y=578.63)
+
+Matched Point P19:
+  Frame: 49
+  RGB: id=8, (x=925.92, y=495.87)
+  IR : id=8, (x=804.10, y=549.81)
+
+Matched Point P20:
+  Frame: 50
+  RGB: id=8, (x=930.32, y=488.41)
+  IR : id=8, (x=825.56, y=529.46)
+
+Matched Point P21:
+  Frame: 54
+  RGB: id=3, (x=879.61, y=501.71)
+  IR : id=8, (x=885.89, y=545.50)
+
+Matched Point P22:
+  Frame: 56
+  RGB: id=3, (x=874.73, y=503.61)
+  IR : id=8, (x=876.89, y=553.89)
+
+Matched Point P23:
+  Frame: 57
+  RGB: id=3, (x=866.78, y=510.26)
+  IR : id=8, (x=871.50, y=557.06)
+
+Matched Point P24:
+  Frame: 61
+  RGB: id=8, (x=941.26, y=493.91)
+  IR : id=8, (x=838.69, y=545.19)
+
+Matched Point P25:
+  Frame: 63
+  RGB: id=8, (x=945.63, y=489.34)
+  IR : id=8, (x=844.62, y=534.34)
+
+Matched Point P26:
+  Frame: 65
+  RGB: id=8, (x=953.07, y=480.34)
+  IR : id=8, (x=858.12, y=519.35)
+
+Matched Point P27:
+  Frame: 66
+  RGB: id=3, (x=855.04, y=490.04)
+  IR : id=8, (x=865.99, y=520.66)
+
+Matched Point P28:
+  Frame: 68
+  RGB: id=8, (x=949.59, y=488.14)
+  IR : id=8, (x=839.15, y=539.48)
+
+Matched Point P29:
+  Frame: 69
+  RGB: id=8, (x=943.87, y=491.79)
+  IR : id=8, (x=827.90, y=543.29)
+
+Matched Point P30:
+  Frame: 70
+  RGB: id=8, (x=932.74, y=493.18)
+  IR : id=8, (x=810.81, y=543.00)
+
+Matched Point P31:
+  Frame: 72
+  RGB: id=8, (x=912.62, y=496.92)
+  IR : id=8, (x=780.41, y=552.33)
+
+Matched Point P32:
+  Frame: 74
+  RGB: id=8, (x=901.06, y=493.15)
+  IR : id=8, (x=760.28, y=539.00)
+
+Matched Point P33:
+  Frame: 75
+  RGB: id=8, (x=905.60, y=499.29)
+  IR : id=8, (x=760.28, y=552.01)
+
+Matched Point P34:
+  Frame: 76
+  RGB: id=8, (x=906.37, y=497.19)
+  IR : id=8, (x=771.97, y=549.55)
+
+Matched Point P35:
+  Frame: 77
+  RGB: id=8, (x=911.32, y=494.63)
+  IR : id=8, (x=782.34, y=542.69)
+
+Matched Point P36:
+  Frame: 78
+  RGB: id=8, (x=916.59, y=493.19)
+  IR : id=8, (x=790.56, y=546.80)
+
+Matched Point P37:
+  Frame: 82
+  RGB: id=8, (x=930.02, y=501.75)
+  IR : id=8, (x=816.08, y=564.59)
+
+Matched Point P38:
+  Frame: 87
+  RGB: id=8, (x=922.81, y=498.46)
+  IR : id=8, (x=799.50, y=551.86)
+
+Matched Point P39:
+  Frame: 88
+  RGB: id=8, (x=918.05, y=491.03)
+  IR : id=8, (x=791.23, y=541.47)
+
+Matched Point P40:
+  Frame: 89
+  RGB: id=8, (x=912.82, y=483.93)
+  IR : id=8, (x=778.20, y=521.77)
+
+Matched Point P41:
+  Frame: 90
+  RGB: id=8, (x=910.78, y=482.27)
+  IR : id=8, (x=780.22, y=519.16)
+
+Matched Point P42:
+  Frame: 91
+  RGB: id=8, (x=913.76, y=478.43)
+  IR : id=8, (x=789.87, y=512.58)
+
+Matched Point P43:
+  Frame: 92
+  RGB: id=8, (x=921.25, y=477.88)
+  IR : id=8, (x=799.71, y=514.12)
+
+Matched Point P44:
+  Frame: 94
+  RGB: id=8, (x=930.49, y=481.86)
+  IR : id=8, (x=813.80, y=523.61)
+
+Matched Point P45:
+  Frame: 95
+  RGB: id=8, (x=933.12, y=487.21)
+  IR : id=8, (x=818.58, y=532.34)
+
+Matched Point P46:
+  Frame: 97
+  RGB: id=8, (x=933.94, y=493.96)
+  IR : id=8, (x=818.73, y=544.05)
+
+Matched Point P47:
+  Frame: 102
+  RGB: id=8, (x=925.69, y=496.30)
+  IR : id=8, (x=806.00, y=552.48)
+
+Matched Point P48:
+  Frame: 103
+  RGB: id=8, (x=924.75, y=498.01)
+  IR : id=8, (x=804.59, y=554.58)
+
+Matched Point P49:
+  Frame: 104
+  RGB: id=8, (x=921.00, y=494.27)
+  IR : id=8, (x=802.22, y=548.48)
+
+Matched Point P50:
+  Frame: 105
+  RGB: id=8, (x=920.35, y=488.47)
+  IR : id=8, (x=800.50, y=537.19)
+
+Matched Point P51:
+  Frame: 107
+  RGB: id=8, (x=921.05, y=507.16)
+  IR : id=8, (x=803.02, y=570.68)
+
+Matched Point P52:
+  Frame: 108
+  RGB: id=8, (x=923.03, y=502.02)
+  IR : id=8, (x=803.02, y=559.41)
+
+Matched Point P53:
+  Frame: 110
+  RGB: id=8, (x=927.22, y=492.41)
+  IR : id=8, (x=806.66, y=542.31)
+
+Matched Point P54:
+  Frame: 117
+  RGB: id=8, (x=913.75, y=492.29)
+  IR : id=8, (x=780.83, y=540.16)
+
+Matched Point P55:
+  Frame: 120
+  RGB: id=8, (x=908.24, y=488.71)
+  IR : id=8, (x=773.00, y=536.26)
+
+Matched Point P56:
+  Frame: 126
+  RGB: id=8, (x=908.66, y=477.17)
+  IR : id=8, (x=781.16, y=513.76)
+
+Matched Point P57:
+  Frame: 128
+  RGB: id=8, (x=929.14, y=484.66)
+  IR : id=8, (x=812.79, y=528.80)
+
+Matched Point P58:
+  Frame: 133
+  RGB: id=8, (x=943.24, y=499.07)
+  IR : id=8, (x=842.73, y=552.72)
+
+Matched Point P59:
+  Frame: 134
+  RGB: id=8, (x=947.07, y=497.25)
+  IR : id=8, (x=851.52, y=547.36)
+
+Matched Point P60:
+  Frame: 137
+  RGB: id=8, (x=945.49, y=480.84)
+  IR : id=8, (x=844.45, y=522.36)
+
+Matched Point P61:
+  Frame: 141
+  RGB: id=8, (x=940.07, y=494.24)
+  IR : id=8, (x=832.21, y=543.93)
+
+Matched Point P62:
+  Frame: 145
+  RGB: id=1, (x=793.51, y=492.66)
+  IR : id=8, (x=879.18, y=534.10)
+
+Matched Point P63:
+  Frame: 146
+  RGB: id=1, (x=797.68, y=495.44)
+  IR : id=8, (x=880.77, y=531.93)
+
+Matched Point P64:
+  Frame: 151
+  RGB: id=8, (x=920.99, y=500.98)
+  IR : id=8, (x=787.64, y=557.15)
+
+Matched Point P65:
+  Frame: 154
+  RGB: id=8, (x=911.84, y=480.88)
+  IR : id=8, (x=776.43, y=521.54)
+
+Matched Point P66:
+  Frame: 155
+  RGB: id=8, (x=918.93, y=475.31)
+  IR : id=8, (x=791.37, y=510.11)
+
+Matched Point P67:
+  Frame: 156
+  RGB: id=8, (x=931.65, y=479.47)
+  IR : id=8, (x=809.79, y=514.39)
+
+Matched Point P68:
+  Frame: 159
+  RGB: id=1, (x=809.95, y=510.72)
+  IR : id=8, (x=888.37, y=558.77)
+
+Matched Point P69:
+  Frame: 160
+  RGB: id=1, (x=812.73, y=511.18)
+  IR : id=8, (x=889.90, y=569.65)
+
+Matched Point P70:
+  Frame: 161
+  RGB: id=1, (x=810.42, y=513.96)
+  IR : id=8, (x=883.93, y=575.73)
+
+Matched Point P71:
+  Frame: 162
+  RGB: id=1, (x=809.95, y=507.48)
+  IR : id=8, (x=877.09, y=560.32)
+
+Matched Point P72:
+  Frame: 165
+  RGB: id=8, (x=958.21, y=498.20)
+  IR : id=8, (x=869.88, y=555.78)
+
+Matched Point P73:
+  Frame: 167
+  RGB: id=8, (x=950.50, y=481.82)
+  IR : id=8, (x=849.20, y=527.28)
+
+Matched Point P74:
+  Frame: 168
+  RGB: id=8, (x=950.00, y=487.25)
+  IR : id=8, (x=847.98, y=534.62)
+
+Matched Point P75:
+  Frame: 169
+  RGB: id=8, (x=950.29, y=489.50)
+  IR : id=8, (x=849.55, y=536.97)
+
+Matched Point P76:
+  Frame: 170
+  RGB: id=8, (x=948.56, y=489.50)
+  IR : id=8, (x=842.18, y=535.92)
+
+Matched Point P77:
+  Frame: 173
+  RGB: id=8, (x=920.60, y=495.05)
+  IR : id=8, (x=794.94, y=544.28)
+
+Matched Point P78:
+  Frame: 177
+  RGB: id=8, (x=908.72, y=486.04)
+  IR : id=8, (x=773.06, y=528.73)
+
+Matched Point P79:
+  Frame: 182
+  RGB: id=8, (x=824.55, y=490.69)
+  IR : id=5, (x=955.38, y=553.12)
+
+Matched Point P80:
+  Frame: 183
+  RGB: id=8, (x=803.49, y=499.03)
+  IR : id=6, (x=941.02, y=572.82)
+
+Matched Point P81:
+  Frame: 186
+  RGB: id=6, (x=950.69, y=517.03)
+  IR : id=6, (x=844.32, y=581.50)
+
+Matched Point P82:
+  Frame: 187
+  RGB: id=6, (x=934.93, y=507.98)
+  IR : id=6, (x=818.80, y=568.14)
+
+Matched Point P83:
+  Frame: 189
+  RGB: id=6, (x=934.06, y=491.05)
+  IR : id=6, (x=807.17, y=534.46)
+
+Matched Point P84:
+  Frame: 190
+  RGB: id=6, (x=929.09, y=489.88)
+  IR : id=6, (x=805.09, y=527.17)
+
+Matched Point P85:
+  Frame: 192
+  RGB: id=6, (x=935.52, y=487.84)
+  IR : id=6, (x=823.32, y=530.98)
+
+Matched Point P86:
+  Frame: 195
+  RGB: id=5, (x=959.80, y=494.08)
+  IR : id=6, (x=865.68, y=549.04)
+
+Matched Point P87:
+  Frame: 197
+  RGB: id=8, (x=761.85, y=492.88)
+  IR : id=6, (x=877.66, y=556.85)
+
+Matched Point P88:
+  Frame: 199
+  RGB: id=8, (x=775.05, y=500.09)
+  IR : id=6, (x=910.47, y=569.52)
+
+Matched Point P89:
+  Frame: 200
+  RGB: id=8, (x=790.18, y=498.11)
+  IR : id=6, (x=940.15, y=564.14)
+
+Matched Point P90:
+  Frame: 202
+  RGB: id=8, (x=835.62, y=494.78)
+  IR : id=8, (x=643.62, y=544.58)
+
+Matched Point P91:
+  Frame: 203
+  RGB: id=8, (x=864.44, y=496.04)
+  IR : id=8, (x=682.71, y=547.97)
+
+Matched Point P92:
+  Frame: 204
+  RGB: id=8, (x=886.33, y=499.11)
+  IR : id=8, (x=727.41, y=553.78)
+
+Matched Point P93:
+  Frame: 205
+  RGB: id=8, (x=907.04, y=504.35)
+  IR : id=8, (x=767.41, y=563.44)
+
+Matched Point P94:
+  Frame: 208
+  RGB: id=8, (x=957.99, y=493.92)
+  IR : id=8, (x=872.81, y=541.22)
+
+Matched Point P95:
+  Frame: 212
+  RGB: id=1, (x=858.28, y=487.11)
+  IR : id=8, (x=906.73, y=523.76)
+
+Matched Point P96:
+  Frame: 214
+  RGB: id=1, (x=854.34, y=503.97)
+  IR : id=8, (x=894.85, y=548.93)
+
+Matched Point P97:
+  Frame: 215
+  RGB: id=1, (x=846.25, y=511.20)
+  IR : id=8, (x=880.70, y=562.63)
+
+Matched Point P98:
+  Frame: 220
+  RGB: id=8, (x=905.35, y=489.06)
+  IR : id=8, (x=772.52, y=536.19)
+
+Matched Point P99:
+  Frame: 221
+  RGB: id=8, (x=905.19, y=485.29)
+  IR : id=8, (x=771.69, y=526.80)
+
+Matched Point P100:
+  Frame: 224
+  RGB: id=8, (x=919.91, y=491.34)
+  IR : id=8, (x=799.90, y=540.80)
+
+Matched Point P101:
+  Frame: 227
+  RGB: id=8, (x=939.50, y=495.71)
+  IR : id=8, (x=832.28, y=548.10)
+
+Matched Point P102:
+  Frame: 228
+  RGB: id=8, (x=944.38, y=499.33)
+  IR : id=8, (x=840.75, y=552.50)
+
+Matched Point P103:
+  Frame: 230
+  RGB: id=8, (x=933.11, y=506.01)
+  IR : id=8, (x=821.68, y=569.27)
+
+Matched Point P104:
+  Frame: 231
+  RGB: id=8, (x=928.19, y=506.81)
+  IR : id=8, (x=809.47, y=565.14)
+
+Matched Point P105:
+  Frame: 233
+  RGB: id=8, (x=914.85, y=502.27)
+  IR : id=8, (x=789.63, y=560.27)
+
+Matched Point P106:
+  Frame: 234
+  RGB: id=8, (x=914.99, y=501.26)
+  IR : id=8, (x=790.16, y=557.78)
+
+Matched Point P107:
+  Frame: 236
+  RGB: id=8, (x=926.21, y=488.56)
+  IR : id=8, (x=809.17, y=536.17)
+
+Matched Point P108:
+  Frame: 239
+  RGB: id=8, (x=953.67, y=489.04)
+  IR : id=8, (x=850.81, y=536.69)
+
+Matched Point P109:
+  Frame: 241
+  RGB: id=1, (x=873.90, y=492.71)
+  IR : id=8, (x=885.09, y=529.40)
+
+Matched Point P110:
+  Frame: 242
+  RGB: id=1, (x=880.28, y=496.31)
+  IR : id=8, (x=901.69, y=534.75)
+
+Matched Point P111:
+  Frame: 244
+  RGB: id=1, (x=877.67, y=508.48)
+  IR : id=8, (x=892.62, y=560.18)
+
+Matched Point P112:
+  Frame: 249
+  RGB: id=8, (x=893.45, y=504.94)
+  IR : id=8, (x=750.95, y=563.08)
+
+Matched Point P113:
+  Frame: 257
+  RGB: id=8, (x=888.04, y=483.09)
+  IR : id=8, (x=732.38, y=523.36)
+
+Matched Point P114:
+  Frame: 259
+  RGB: id=8, (x=910.65, y=494.09)
+  IR : id=8, (x=772.73, y=544.85)
+
+Matched Point P115:
+  Frame: 260
+  RGB: id=8, (x=915.38, y=495.09)
+  IR : id=8, (x=777.25, y=546.29)
+
+Matched Point P116:
+  Frame: 261
+  RGB: id=8, (x=922.69, y=496.22)
+  IR : id=8, (x=790.50, y=547.25)
+
+Matched Point P117:
+  Frame: 264
+  RGB: id=8, (x=933.56, y=512.14)
+  IR : id=8, (x=813.11, y=579.34)
+
+Matched Point P118:
+  Frame: 265
+  RGB: id=8, (x=936.67, y=511.92)
+  IR : id=8, (x=811.23, y=578.44)
+
+Matched Point P119:
+  Frame: 268
+  RGB: id=8, (x=931.97, y=513.38)
+  IR : id=8, (x=803.52, y=574.90)
+
+Matched Point P120:
+  Frame: 270
+  RGB: id=8, (x=941.19, y=502.58)
+  IR : id=8, (x=823.30, y=556.54)
+
+Matched Point P121:
+  Frame: 272
+  RGB: id=1, (x=884.19, y=500.42)
+  IR : id=8, (x=862.95, y=541.24)
+
+Matched Point P122:
+  Frame: 273
+  RGB: id=1, (x=887.27, y=503.62)
+  IR : id=8, (x=863.62, y=548.29)
+
+Matched Point P123:
+  Frame: 277
+  RGB: id=8, (x=904.38, y=517.14)
+  IR : id=8, (x=743.22, y=586.40)
+
+Matched Point P124:
+  Frame: 278
+  RGB: id=8, (x=887.22, y=511.99)
+  IR : id=8, (x=712.46, y=574.62)
+
+Matched Point P125:
+  Frame: 280
+  RGB: id=8, (x=868.15, y=495.48)
+  IR : id=8, (x=683.97, y=544.15)
+
+Matched Point P126:
+  Frame: 286
+  RGB: id=8, (x=850.67, y=489.72)
+  IR : id=8, (x=656.05, y=537.77)
+
+Matched Point P127:
+  Frame: 290
+  RGB: id=8, (x=865.74, y=494.90)
+  IR : id=8, (x=679.84, y=546.25)
+
+Matched Point P128:
+  Frame: 294
+  RGB: id=8, (x=855.94, y=501.87)
+  IR : id=8, (x=665.04, y=555.64)
+
+Matched Point P129:
+  Frame: 297
+  RGB: id=8, (x=850.23, y=498.88)
+  IR : id=8, (x=656.53, y=553.13)
+
+Matched Point P130:
+  Frame: 299
+  RGB: id=8, (x=864.44, y=495.14)
+  IR : id=8, (x=679.48, y=543.37)
+
+Matched Point P131:
+  Frame: 301
+  RGB: id=8, (x=888.38, y=503.09)
+  IR : id=8, (x=719.65, y=559.77)
+
+Matched Point P132:
+  Frame: 303
+  RGB: id=8, (x=918.85, y=502.95)
+  IR : id=8, (x=771.03, y=559.84)
+
+Matched Point P133:
+  Frame: 304
+  RGB: id=8, (x=932.39, y=506.78)
+  IR : id=8, (x=795.48, y=564.77)
+
+Matched Point P134:
+  Frame: 305
+  RGB: id=8, (x=947.13, y=508.77)
+  IR : id=8, (x=821.50, y=572.50)
+
+Matched Point P135:
+  Frame: 306
+  RGB: id=8, (x=958.93, y=508.46)
+  IR : id=8, (x=847.85, y=571.55)
+
+Matched Point P136:
+  Frame: 307
+  RGB: id=1, (x=901.75, y=518.88)
+  IR : id=1, (x=749.13, y=599.95)
+
+Matched Point P137:
+  Frame: 310
+  RGB: id=1, (x=887.48, y=513.83)
+  IR : id=1, (x=726.15, y=580.45)
+
+Matched Point P138:
+  Frame: 311
+  RGB: id=1, (x=888.49, y=508.78)
+  IR : id=1, (x=729.05, y=572.48)
+
+Matched Point P139:
+  Frame: 312
+  RGB: id=1, (x=890.25, y=501.45)
+  IR : id=1, (x=731.59, y=560.17)
+
+Matched Point P140:
+  Frame: 315
+  RGB: id=1, (x=915.25, y=491.86)
+  IR : id=1, (x=776.24, y=545.31)
+
+Matched Point P141:
+  Frame: 318
+  RGB: id=1, (x=941.51, y=504.48)
+  IR : id=1, (x=832.77, y=570.67)
+
+Matched Point P142:
+  Frame: 324
+  RGB: id=1, (x=922.08, y=514.08)
+  IR : id=1, (x=787.47, y=584.80)
+
+Matched Point P143:
+  Frame: 325
+  RGB: id=1, (x=920.56, y=510.79)
+  IR : id=1, (x=785.30, y=578.28)
+
+Matched Point P144:
+  Frame: 329
+  RGB: id=1, (x=904.72, y=509.89)
+  IR : id=1, (x=753.87, y=580.44)
+
+Matched Point P145:
+  Frame: 331
+  RGB: id=1, (x=892.08, y=514.95)
+  IR : id=1, (x=731.24, y=584.83)
+
+Matched Point P146:
+  Frame: 332
+  RGB: id=1, (x=884.50, y=508.77)
+  IR : id=1, (x=716.54, y=574.01)
+
+Matched Point P147:
+  Frame: 334
+  RGB: id=1, (x=888.36, y=498.94)
+  IR : id=1, (x=727.70, y=555.77)
+
+Matched Point P148:
+  Frame: 340
+  RGB: id=1, (x=858.75, y=503.99)
+  IR : id=1, (x=666.72, y=567.93)
+
+Matched Point P149:
+  Frame: 341
+  RGB: id=1, (x=850.33, y=507.08)
+  IR : id=1, (x=654.85, y=570.63)
+
+Matched Point P150:
+  Frame: 342
+  RGB: id=1, (x=844.99, y=505.12)
+  IR : id=1, (x=646.07, y=567.59)
+
+Matched Point P151:
+  Frame: 343
+  RGB: id=1, (x=841.62, y=505.24)
+  IR : id=1, (x=641.00, y=566.24)
+
+Matched Point P152:
+  Frame: 348
+  RGB: id=1, (x=809.18, y=503.00)
+  IR : id=1, (x=586.11, y=561.18)
+
+Matched Point P153:
+  Frame: 349
+  RGB: id=1, (x=807.21, y=501.03)
+  IR : id=1, (x=581.88, y=557.12)
+
+Matched Point P154:
+  Frame: 351
+  RGB: id=1, (x=827.44, y=494.01)
+  IR : id=1, (x=613.63, y=545.30)
+
+Matched Point P155:
+  Frame: 358
+  RGB: id=1, (x=851.00, y=512.62)
+  IR : id=1, (x=661.10, y=581.10)
+
+Matched Point P156:
+  Frame: 360
+  RGB: id=1, (x=875.04, y=505.89)
+  IR : id=1, (x=699.96, y=569.62)
+
+Matched Point P157:
+  Frame: 362
+  RGB: id=1, (x=919.69, y=495.07)
+  IR : id=1, (x=770.73, y=551.38)
+
+Matched Point P158:
+  Frame: 377
+  RGB: id=1, (x=945.53, y=506.23)
+  IR : id=1, (x=830.51, y=571.31)
+
+Matched Point P159:
+  Frame: 380
+  RGB: id=1, (x=919.33, y=503.34)
+  IR : id=1, (x=780.85, y=562.86)
+
+Matched Point P160:
+  Frame: 381
+  RGB: id=1, (x=915.01, y=503.10)
+  IR : id=1, (x=772.40, y=564.55)
+
+Matched Point P161:
+  Frame: 382
+  RGB: id=1, (x=908.76, y=505.74)
+  IR : id=1, (x=760.58, y=566.58)
+
+Matched Point P162:
+  Frame: 385
+  RGB: id=1, (x=894.33, y=511.51)
+  IR : id=1, (x=736.94, y=578.74)
+
+Matched Point P163:
+  Frame: 390
+  RGB: id=1, (x=906.35, y=507.91)
+  IR : id=1, (x=759.74, y=570.98)
+
+Matched Point P164:
+  Frame: 392
+  RGB: id=1, (x=903.59, y=511.75)
+  IR : id=1, (x=752.31, y=583.82)
+
+Matched Point P165:
+  Frame: 393
+  RGB: id=1, (x=900.95, y=513.44)
+  IR : id=1, (x=748.25, y=580.43)
+
+Matched Point P166:
+  Frame: 397
+  RGB: id=1, (x=901.67, y=497.81)
+  IR : id=1, (x=750.28, y=555.09)
+
+Matched Point P167:
+  Frame: 400
+  RGB: id=1, (x=915.13, y=495.17)
+  IR : id=1, (x=781.37, y=552.05)
+
+Matched Point P168:
+  Frame: 402
+  RGB: id=1, (x=923.30, y=498.05)
+  IR : id=1, (x=788.79, y=556.78)
+
+Matched Point P169:
+  Frame: 403
+  RGB: id=1, (x=918.97, y=504.54)
+  IR : id=1, (x=780.68, y=566.92)
+
+Matched Point P170:
+  Frame: 404
+  RGB: id=1, (x=913.45, y=507.19)
+  IR : id=1, (x=771.90, y=570.29)
+
+Matched Point P171:
+  Frame: 407
+  RGB: id=1, (x=912.73, y=496.61)
+  IR : id=1, (x=776.80, y=548.34)
+
+Matched Point P172:
+  Frame: 408
+  RGB: id=1, (x=915.61, y=495.41)
+  IR : id=1, (x=780.86, y=551.71)
+
+Matched Point P173:
+  Frame: 411
+  RGB: id=1, (x=927.26, y=487.24)
+  IR : id=1, (x=798.42, y=538.20)
+
+Matched Point P174:
+  Frame: 413
+  RGB: id=1, (x=928.94, y=500.46)
+  IR : id=1, (x=800.12, y=562.86)
+
+Matched Point P175:
+  Frame: 415
+  RGB: id=1, (x=914.76, y=506.95)
+  IR : id=1, (x=767.01, y=577.06)
+
+Matched Point P176:
+  Frame: 419
+  RGB: id=1, (x=897.71, y=504.78)
+  IR : id=1, (x=744.88, y=566.25)
+
+Matched Point P177:
+  Frame: 425
+  RGB: id=1, (x=912.61, y=501.18)
+  IR : id=1, (x=767.85, y=564.90)
+
+Matched Point P178:
+  Frame: 427
+  RGB: id=1, (x=906.60, y=499.26)
+  IR : id=1, (x=762.79, y=556.11)
+
+Matched Point P179:
+  Frame: 428
+  RGB: id=1, (x=911.16, y=493.97)
+  IR : id=1, (x=767.85, y=548.01)
+
+Matched Point P180:
+  Frame: 433
+  RGB: id=1, (x=947.69, y=500.70)
+  IR : id=1, (x=835.08, y=563.55)
+
+Matched Point P181:
+  Frame: 434
+  RGB: id=1, (x=943.25, y=504.06)
+  IR : id=1, (x=822.92, y=567.26)
+
+Matched Point P182:
+  Frame: 435
+  RGB: id=1, (x=932.67, y=507.91)
+  IR : id=1, (x=804.00, y=576.72)
+
+Matched Point P183:
+  Frame: 442
+  RGB: id=1, (x=953.84, y=494.45)
+  IR : id=1, (x=855.85, y=548.01)
+
+Matched Point P184:
+  Frame: 444
+  RGB: id=8, (x=889.89, y=494.26)
+  IR : id=1, (x=862.95, y=565.91)
+
+Matched Point P185:
+  Frame: 445
+  RGB: id=8, (x=886.58, y=498.27)
+  IR : id=1, (x=857.20, y=570.30)
+
+Matched Point P186:
+  Frame: 455
+  RGB: id=8, (x=887.73, y=487.01)
+  IR : id=1, (x=885.91, y=545.63)
+
+Matched Point P187:
+  Frame: 461
+  RGB: id=1, (x=942.64, y=504.44)
+  IR : id=1, (x=825.11, y=567.94)
+
+Matched Point P188:
+  Frame: 464
+  RGB: id=1, (x=945.38, y=494.64)
+  IR : id=1, (x=830.17, y=547.33)
+
+Matched Point P189:
+  Frame: 466
+  RGB: id=1, (x=953.22, y=502.48)
+  IR : id=1, (x=846.06, y=561.18)
+
+Matched Point P190:
+  Frame: 468
+  RGB: id=1, (x=959.43, y=500.52)
+  IR : id=1, (x=855.68, y=563.88)
+
+Matched Point P191:
+  Frame: 475
+  RGB: id=1, (x=933.28, y=493.33)
+  IR : id=1, (x=806.52, y=544.97)
+
+Matched Point P192:
+  Frame: 476
+  RGB: id=1, (x=921.85, y=493.33)
+  IR : id=1, (x=788.96, y=546.99)
+
+Matched Point P193:
+  Frame: 479
+  RGB: id=1, (x=852.07, y=492.03)
+  IR : id=1, (x=681.87, y=545.30)
+
+Matched Point P194:
+  Frame: 480
+  RGB: id=1, (x=820.54, y=492.03)
+  IR : id=1, (x=624.11, y=540.57)
+
+Matched Point P195:
+  Frame: 482
+  RGB: id=5, (x=958.69, y=494.29)
+  IR : id=5, (x=867.75, y=544.17)
+
+Matched Point P196:
+  Frame: 488
+  RGB: id=6, (x=878.84, y=507.13)
+  IR : id=6, (x=702.85, y=569.92)
+
+Matched Point P197:
+  Frame: 491
+  RGB: id=6, (x=859.34, y=503.99)
+  IR : id=6, (x=670.30, y=561.87)
+
